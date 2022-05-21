@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Four card feature section</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --main-red: hsl(0, 78%, 62%);
+        --main-cyan: hsl(180, 62%, 55%);
+        --main-orange: hsl(34, 97%, 64%);
+        --main-blue: hsl(212, 86%, 64%);
+        --main-heading-color: hsl(234, 12%, 34%);
+        --main-paragraph-color: hsl(229, 6%, 66%);
+        --main-background-body: hsl(0, 0%, 98%);
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      main {
+        background-color: var(--main-background-body);
+        padding: 50px;
+      }
+      main .head {
+        text-align: center;
+        padding: 0 330px;
+        margin-bottom: 50px;
+      }
+      main .head span {
+        display: block;
+        font-weight: 200;
+        color: var(--main-paragraph-color);
+        margin-bottom: -5px;
+      }
+      main .head h1 {
+        color: var(--main-heading-color);
+      }
+      main p {
+        color: var(--main-paragraph-color);
+        font-size: 15px;
+        margin: 10px 0 30px;
+      }
+      main .feature {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      main .feature .col {
+        width: calc(95% / 3);
+      }
+      main .feature .card {
+        background-color: white;
+        border-radius: 5px;
+        padding: 25px;
+        box-shadow: 0 10px 10px #ddd;
+      }
+      main .feature .card h2 {
+        font-size: 18px;
+        color: var(--main-heading-color);
+      }
+      main .feature .card span {
+        display: block;
+        text-align: right;
+      }
+      main .feature .card.cyan {
+        border-top: 4px solid var(--main-cyan);
+      }
+      main .feature .card.red {
+        border-top: 4px solid var(--main-red);
+        margin-bottom: 30px;
+      }
+      main .feature .card.orange {
+        border-top: 4px solid var(--main-orange);
+      }
+      main .feature .card.blue {
+        border-top: 4px solid var(--main-blue);
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      @media (max-width: 375px) {
+        main {
+          padding: 60px 30px;
+        }
+        main .head {
+          padding: 0;
+          margin-bottom: 70px;
+        }
+        main .head h1 {
+          font-size: 25px;
+        }
+        main .feature {
+          display: block;
+        }
+        main .feature .col {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="head">
+        <h1><span>Reliable, efficient delivery</span> Powered by Technology</h1>
+        <p>
+          Our Artificial Intelligence powered tools use millions of project data
+          points to ensure that your project is successful
+        </p>
+      </div>
+      <div class="feature">
+        <div class="col">
+          <div class="card cyan">
+            <h2>Supervisor</h2>
+            <p>Monitors activity to identify project roadblocks</p>
+            <span>
+              <img src="images/icon-supervisor.svg" alt="" />
+            </span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card red">
+            <h2>Team Builder</h2>
+            <p>
+              Scans our talent network to create the optimal team for your
+              project
+            </p>
+            <span>
+              <img src="images/icon-team-builder.svg" alt="" />
+            </span>
+          </div>
+          <div class="card orange">
+            <h2>Karma</h2>
+            <p>Regularly evaluates our talent to ensure quality</p>
+            <span>
+              <img src="images/icon-karma.svg" alt="" />
+            </span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card blue">
+            <h2>Calculator</h2>
+            <p>
+              Uses data from past projects to provide better delivery estimates
+            </p>
+            <span>
+              <img src="images/icon-calculator.svg" alt="" />
+            </span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          href="https://www.facebook.com/profile.php?id=100070353519910"
+          target="_blank"
+          >Mohamed Shaheen</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>
