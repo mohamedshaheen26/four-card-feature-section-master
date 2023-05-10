@@ -26,102 +26,129 @@
         --main-cyan: hsl(180, 62%, 55%);
         --main-orange: hsl(34, 97%, 64%);
         --main-blue: hsl(212, 86%, 64%);
+
         --main-heading-color: hsl(234, 12%, 34%);
         --main-paragraph-color: hsl(229, 6%, 66%);
-        --main-background-body: hsl(0, 0%, 98%);
+        --main-body-background: hsl(0, 0%, 98%);
       }
+
+      /* Start Grid System */
+      .container {
+        padding: 0 15px;
+        margin: 0 auto;
+      }
+      /* Small Devices */
+      @media (min-width: 768px) {
+        .container {
+          width: 750px;
+        }
+      }
+      /* Medium Devices */
+      @media (min-width: 992px) {
+        .container {
+          width: 970px;
+        }
+      }
+      /* Large Devices */
+      @media (min-width: 1200px) {
+        .container {
+          width: 1170px;
+        }
+      }
+      /* End Grid System */
+
       * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
       }
+
       body {
         font-family: "Poppins", sans-serif;
       }
+
       main {
-        background-color: var(--main-background-body);
-        padding: 50px;
+        background-color: var(--main-body-background);
+        padding: 50px 0;
       }
-      main .container {
-        padding: 0 80px;
+
+      h1,h2 {
+        color: var(--main-heading-color);
       }
-      main .head {
-        text-align: center;
-        margin-bottom: 50px;
+
+      h2 {
+        font-size: 18px;
       }
+
+      p {
+        color: var(--main-paragraph-color);
+        font-size: 15px;
+        margin: 10px 0 30px;
+        line-height: 1.6;
+      }
+
+      img {
+        display: block;
+        margin-left: auto;
+      }
+
       main .head {
         width: 50%;
-        margin: 0 auto;
+        margin: 50px auto;
+        text-align: center;
       }
+
       main .head span {
         display: block;
         font-weight: 200;
         color: var(--main-paragraph-color);
-        margin-bottom: -5px;
       }
-      main .head h1 {
-        color: var(--main-heading-color);
-      }
-      main p {
-        color: var(--main-paragraph-color);
-        font-size: 15px;
-        margin: 10px 0 30px;
-      }
+
       main .feature {
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
+
       main .feature .col {
-        width: calc(95% / 3);
+        width: calc(94% / 3);
       }
+
       main .feature .card {
-        background-color: white;
+        background-color: #fff;
         border-radius: 5px;
-        padding: 25px;
+        padding: 30px;
         box-shadow: 0 10px 10px #ddd;
       }
-      main .feature .card h2 {
-        font-size: 18px;
-        color: var(--main-heading-color);
-      }
-      main .feature .card span {
-        display: block;
-        text-align: right;
-      }
+
       main .feature .card.cyan {
         border-top: 4px solid var(--main-cyan);
       }
+
       main .feature .card.red {
         border-top: 4px solid var(--main-red);
         margin-bottom: 30px;
       }
+
       main .feature .card.orange {
         border-top: 4px solid var(--main-orange);
       }
+
       main .feature .card.blue {
         border-top: 4px solid var(--main-blue);
       }
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-      @media (max-width: 375px) {
+
+      @media (max-width: 768px) {
         main {
-          padding: 60px 30px;
+          padding: 60px 15px;
         }
-        main .container {
-          padding: 0;
+        h1 {
+          font-size: 24px;
         }
         main .head {
+          width: 100%;
           padding: 0;
           margin-bottom: 70px;
-        }
-        main .head h1 {
-          font-size: 25px;
         }
         main .feature {
           display: block;
@@ -130,6 +157,15 @@
           width: 100%;
           margin-bottom: 30px;
         }
+      }
+
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
       }
     </style>
   </head>
@@ -150,9 +186,7 @@
             <div class="card cyan">
               <h2>Supervisor</h2>
               <p>Monitors activity to identify project roadblocks</p>
-              <span>
-                <img src="images/icon-supervisor.svg" alt="" />
-              </span>
+              <img src="images/icon-supervisor.svg" alt="Supervisor" />
             </div>
           </div>
           <div class="col">
@@ -162,16 +196,12 @@
                 Scans our talent network to create the optimal team for your
                 project
               </p>
-              <span>
-                <img src="images/icon-team-builder.svg" alt="" />
-              </span>
+              <img src="images/icon-team-builder.svg" alt="Team Builder" />
             </div>
             <div class="card orange">
               <h2>Karma</h2>
               <p>Regularly evaluates our talent to ensure quality</p>
-              <span>
-                <img src="images/icon-karma.svg" alt="" />
-              </span>
+              <img src="images/icon-karma.svg" alt="Karma" />
             </div>
           </div>
           <div class="col">
@@ -181,25 +211,20 @@
                 Uses data from past projects to provide better delivery
                 estimates
               </p>
-              <span>
-                <img src="images/icon-calculator.svg" alt="" />
-              </span>
+              <img src="images/icon-Calculator.svg" alt="Calculator" />
             </div>
           </div>
         </div>
       </div>
     </main>
+
     <footer>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by
-        <a
-          href="https://www.facebook.com/profile.php?id=100070353519910"
-          target="_blank"
-          >Mohamed Shaheen</a
-        >.
+        >. Coded by <a href="https://www.linkedin.com/in/mohamed-shaheen-208718234/" target="_blank"
+          >Mohamed Shaheen</a>.
       </p>
     </footer>
   </body>
